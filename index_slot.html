@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .panel{
+            max-width: 500px;
+            border:1px solid #999;
+            margin-bottom: 15px;
+        }
+        .panel >* {
+            padding: 15px;
+        }
+        .panel .title{
+            border-bottom: 1px solid #999;
+        }
+        .panel .footer{
+            border-top:  1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    
+    <panel>
+        <div slot="title">111</div>
+        <div slot="content">
+            xi xi
+        </div>
+        <!-- <div slot="footer">bingo</div> -->
+        
+    </panel>
+   
+</div>
+<template id="panel-tpl">
+    <div class="panel">
+    <div class="title">
+        <slot name="title"></slot>
+    </div>
+    <div class="content">
+        <slot name="content"></slot>
+    </div>
+    <div class="footer">
+        <slot name="footer">gengduo</slot>
+    </div>
+    </div>
+</template>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<script src="js/slot.js"></script>
+</html>
